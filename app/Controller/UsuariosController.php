@@ -17,11 +17,10 @@ class UsuariosController extends AppController {
  */
 	public $components = array('Paginator', 'Flash', 'Session');
 
-/**
- * index method
- *
- * @return void
- */
+
+
+
+
 	public function index() {
 		$this->Usuario->recursive = 0;
 		$this->set('usuarios', $this->Paginator->paginate());
