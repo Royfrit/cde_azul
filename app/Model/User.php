@@ -5,7 +5,7 @@ App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
  * Usuario Model
  *
  */
-class Usuario extends AppModel {
+class User extends AppModel {
 
 /**
  * Display field

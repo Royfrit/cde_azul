@@ -36,9 +36,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
+	<div class="container " role="main">
+<?php if (isset($current_user)): ?>
+<?php echo $this->element('default'); ?>
+<?php endif; ?>
+<?php if (!$current_user): ?>
+<?php echo $this->element('default2'); ?>
+<?php endif ?>
 
  
  <?php echo $this->Session->flash(); ?>
+  <?php echo $this->Session->flash('auth'); ?>
 
            
 	<div id="container">

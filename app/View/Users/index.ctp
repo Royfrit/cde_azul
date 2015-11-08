@@ -1,5 +1,5 @@
 <div class="usuarios index">
-	<h2><?php echo __('Usuarios'); ?></h2>
+	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -16,12 +16,12 @@
 	<tbody>
 	<?php foreach ($usuarios as $usuario): ?>
 	<tr>
-		<td><?php echo h($usuario['Usuario']['ced']); ?>&nbsp;</td>
-		<td><?php echo h($usuario['Usuario']['nombres']); ?>&nbsp;</td>
-		<td><?php echo h($usuario['Usuario']['apellidos']); ?>&nbsp;</td>
-		<td><?php echo h($usuario['Usuario']['role']); ?>&nbsp;</td>
-		<td><?php echo h($usuario['Usuario']['sede']); ?>&nbsp;</td>
-		<td><?php echo h($usuario['Usuario']['email']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['ced']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['nombres']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['apellidos']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['role']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['sede']); ?>&nbsp;</td>
+		<td><?php echo h($usuario['User']['email']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $usuario['Usuario']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $usuario['Usuario']['id'])); ?>

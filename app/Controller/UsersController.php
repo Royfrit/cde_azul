@@ -8,7 +8,7 @@ App::uses('AppController', 'Controller');
  * @property FlashComponent $Flash
  * @property SessionComponent $Session
  */
-class UsuariosController extends AppController {
+class UsersController extends AppController {
 
 /**
  * Components
@@ -17,13 +17,37 @@ class UsuariosController extends AppController {
  */
 	public $components = array('Paginator', 'Flash', 'Session');
 
+public function beforeFilter(){
+ parent::beforeFilter();
+            $this->Auth->allow('add', 'edit');
+           
+         }
+
+         public function login(){
+         	if ($this->request->is('post')){
+
+         		if ($this->Auth->login()) {
+         			return $this->redirect($this->Auth->redirectUrl());
+         		}
+         		$this->Session->setFlash('Correo y/o Contraseña invalidos', 'default', array('class'=> 'alert alert-danger'));
+
+         	}
+
+
+         }
+
+
+         public function logout(){
+         	return $this->redirect($this->Auth->logout());
+
+         }
 
 
 
 
 	public function index() {
-		$this->Usuario->recursive = 0;
-		$this->set('usuarios', $this->Paginator->paginate());
+		$this->User->recursive = 0;
+		$this->set('users', $this->Paginator->paginate());
 	}
 
 /**
@@ -34,11 +58,11 @@ class UsuariosController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		if (!$this->Usuario->exists($id)) {
+		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid usuario'));
 		}
-		$options = array('conditions' => array('Usuario.' . $this->Usuario->primaryKey => $id));
-		$this->set('usuario', $this->Usuario->find('first', $options));
+		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+		$this->set('user', $this->User->find('first', $options));
 	}
 
 /**
@@ -48,8 +72,8 @@ class UsuariosController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Usuario->create();
-			if ($this->Usuario->save($this->request->data)) {
+			$this->User->create();
+			if ($this->User->save($this->request->data)) {
 				$this->Flash->success(__('The usuario has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -70,15 +94,15 @@ class UsuariosController extends AppController {
 			throw new NotFoundException(__('Invalid usuario'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Usuario->save($this->request->data)) {
+			if ($this->User->save($this->request->data)) {
 				$this->Flash->success(__('The usuario has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Flash->error(__('The usuario could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Usuario.' . $this->Usuario->primaryKey => $id));
-			$this->request->data = $this->Usuario->find('first', $options);
+			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+			$this->request->data = $this->User->find('first', $options);
 		}
 	}
 
@@ -91,11 +115,11 @@ class UsuariosController extends AppController {
  */
 	public function delete($id = null) {
 		$this->Usuario->id = $id;
-		if (!$this->Usuario->exists()) {
+		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid usuario'));
 		}
 		$this->request->allowMethod('post', 'delete');
-		if ($this->Usuario->delete()) {
+		if ($this->User->delete()) {
 			$this->Flash->success(__('The usuario has been deleted.'));
 		} else {
 			$this->Flash->error(__('The usuario could not be deleted. Please, try again.'));
