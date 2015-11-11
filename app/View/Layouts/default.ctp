@@ -14,13 +14,15 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Control de estudio AIS');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+
+	<?php 
+	echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
@@ -28,8 +30,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-
+		echo $this->Html->css('style');
+		echo $this->Html->css('bootstrap.min');
+			echo $this->Html->css('bootstrap-theme.min');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -40,9 +43,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <?php if (isset($current_user)): ?>
 <?php echo $this->element('default'); ?>
 <?php endif; ?>
-<?php if (!$current_user): ?>
-<?php echo $this->element('default2'); ?>
-<?php endif ?>
 
  
  <?php echo $this->Session->flash(); ?>
@@ -51,7 +51,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
            
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			
 		</div>
 		<div id="content">
 
@@ -71,6 +71,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</p>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php /*echo $this->element('sql_dump');*/ ?>
 </body>
 </html>

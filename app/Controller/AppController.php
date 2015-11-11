@@ -45,7 +45,7 @@ public $components = array(
             ), 
             'authenticate'=> array( 
                 'Form'=> array(
-                'passwordHasher'=> 'Blowfish'
+                'passwordHasher'=> 'Blowfish', 'fields' => array('username'=>'email', 'password'=>'password')
                 )            
 
             ), 'authError'=> false

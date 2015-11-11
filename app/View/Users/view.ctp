@@ -3,48 +3,48 @@
 	<dl>
 		<dt><?php echo __('Ced'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['ced']); ?>
+			<?php echo h($usuario['User']['ced']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nombres'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['nombres']); ?>
+			<?php echo h($usuario['User']['nombres']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Apellidos'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['apellidos']); ?>
+			<?php echo h($usuario['User']['apellidos']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Fecha Nac'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['Fecha_nac']); ?>
+			<?php echo h($usuario['User']['Fecha_nac']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Direccion'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['Direccion']); ?>
+			<?php echo h($usuario['User']['Direccion']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Telefono'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['tipotlf']); ?>
-			<?php echo h($usuario['Usuario']['tlf']); ?>
+			<?php echo h($usuario['User']['tipotlf']); ?>
+			<?php echo h($usuario['User']['tlf']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Role'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['role']); ?>
+			<?php echo h($usuario['User']['role']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Sede'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['sede']); ?>
+			<?php echo h($usuario['User']['sede']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Email'); ?></dt>
 		<dd>
-			<?php echo h($usuario['Usuario']['email']); ?>
+			<?php echo h($usuario['User']['email']); ?>
 			&nbsp;
 		</dd>
 	
@@ -53,8 +53,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Usuario'), array('action' => 'edit', $usuario['Usuario']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Usuario'), array('action' => 'delete', $usuario['Usuario']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $usuario['Usuario']['id']))); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit Usuario'), array('action' => 'edit', $usuario['User']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Usuario'), array('action' => 'delete', $usuario['User']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $usuario['User']['id']))); ?> </li>
 		<li><?php echo $this->Html->link(__('List Usuarios'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Usuario'), array('action' => 'add')); ?> </li>
 	</ul>

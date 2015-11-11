@@ -14,7 +14,7 @@
 	</tr>
 	</thead>
 	<tbody>
-	<?php foreach ($usuarios as $usuario): ?>
+	<?php foreach ($users as $usuario): ?>
 	<tr>
 		<td><?php echo h($usuario['User']['ced']); ?>&nbsp;</td>
 		<td><?php echo h($usuario['User']['nombres']); ?>&nbsp;</td>
@@ -23,9 +23,9 @@
 		<td><?php echo h($usuario['User']['sede']); ?>&nbsp;</td>
 		<td><?php echo h($usuario['User']['email']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $usuario['Usuario']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $usuario['Usuario']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $usuario['Usuario']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $usuario['Usuario']['id']))); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $usuario['User']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $usuario['User']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $usuario['User']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $usuario['User']['id']))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

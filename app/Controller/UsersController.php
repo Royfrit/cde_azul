@@ -62,7 +62,7 @@ public function beforeFilter(){
 			throw new NotFoundException(__('Invalid usuario'));
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-		$this->set('user', $this->User->find('first', $options));
+		$this->set('usuario', $this->User->find('first', $options));
 	}
 
 /**
@@ -90,7 +90,7 @@ public function beforeFilter(){
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->Usuario->exists($id)) {
+		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid usuario'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
