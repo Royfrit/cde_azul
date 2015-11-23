@@ -37,6 +37,11 @@
 			<?php echo h($usuario['User']['role']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('status'); ?></dt>
+		<dd>
+			<?php echo h($usuario['User']['status']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Sede'); ?></dt>
 		<dd>
 			<?php echo h($usuario['User']['sede']); ?>

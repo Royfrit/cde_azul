@@ -27,12 +27,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
-	<?php
-		echo $this->Html->meta('icon');
-
+	<?php echo $this->Html->meta('icon');
 		echo $this->Html->css('style');
 		echo $this->Html->css('bootstrap.min');
-			echo $this->Html->css('bootstrap-theme.min');
+		echo $this->Html->css('bootstrap-theme.min');			
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
