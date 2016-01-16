@@ -3,8 +3,8 @@
 	<fieldset>
 		<legend> <center><?php echo __('Nuevo Usuario'); ?></center></legend>
 	<?php
-	$meses = array('01' =>'Enero', '02' =>'Febrero', '03' =>'Marzo', '04' =>'Abril', 
-		'05' =>'Mayo', '06' =>'junio', '07' =>'julio', '08' =>'Agosto', '09' =>'Septiembre', 
+	$meses = array('01' =>'Enero', '02' =>'Febrero', '03' =>'Marzo', '04' =>'Abril',
+		'05' =>'Mayo', '06' =>'junio', '07' =>'julio', '08' =>'Agosto', '09' =>'Septiembre',
 		'10' =>'Octubre', '11' =>'Noviembre', '12' =>'Diciembre');
 		echo '<div class="input-group col-xs-9">'.$this->Form->input('ced', array('label'=>' ','placeholder'=>'Cédula' , 'class'=>'form-control'))."</div>";
 		echo '<div class="input-group col-xs-9">'.$this->Form->input('nombres', array('label'=>' ','placeholder'=>'Nombres' , 'class'=>'form-control'))."</div>";

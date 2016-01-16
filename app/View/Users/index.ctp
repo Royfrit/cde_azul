@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			
+
 			<th><?php echo $this->Paginator->sort('Cèdula'); ?></th>
 			<th><?php echo $this->Paginator->sort('Nombres'); ?></th>
 			<th><?php echo $this->Paginator->sort('Apellidos'); ?></th>
@@ -48,6 +48,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Usuario'), array('action' => 'add')); ?></li>
+		<li><?php if ($current_user['role']=='Adminstrador') {
+		 echo 'solo admin'; //$this->Html->link(__('New Usuario'), array('action' => 'add'));
+	 	}?></li>
+
+
 	</ul>
 </div>
