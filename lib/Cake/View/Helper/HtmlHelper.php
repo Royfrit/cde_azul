@@ -421,8 +421,8 @@ class HtmlHelper extends AppHelper {
 			if ($rel) {
 				$options['rel'] = $rel;
 			}
-			if (func_num_args() > 2) {
-				$options = func_get_arg(2) + $options;
+			if (func_num_args() > 3) {
+				$options = func_get_arg(3) + $options;
 			}
 			unset($rel);
 		}
