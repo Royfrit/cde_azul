@@ -1,4 +1,4 @@
-<div class="account-wall"> 
+<div class="account-wall">
 <?php echo $this->Form->create('User', array('class'=>'form-signin')); ?>
    <fieldset>
 
@@ -6,11 +6,11 @@
     <?php
         echo "<div class=''>".$this->Form->input('email', array('label'=>'  ', 'placeholder'=>'Correo', 'class'=>'form-control white'))."</div>";
         echo "<div class=''>".$this->Form->input('password', array('label'=>'  ', 'placeholder'=>'Contraseña', 'class'=>'form-control'))."</div>";?>
-        
+
 
     </fieldset>
 <?php echo $this->Form->Submit('Ingresar', array('class'=>'btn btn-lg btn-primary btn-block')).'</br>';
 
-echo $this->Html->link(__('Registrarse'), array('action' => 'add'), array('class'=>'btn btn-sm btn-danger btn-block'));
+echo $this->Html->link(__('¿Eres Nuevo? , Haz Click Aqui para Registrarte'), array('action' => 'choose'), array('class'=>'btn btn-sm btn-danger btn-block'));
      ?>
 </div>
