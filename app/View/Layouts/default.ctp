@@ -21,7 +21,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 
-	<?php 
+	<?php
 	echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
@@ -30,7 +30,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->meta('icon');
 		echo $this->Html->css('style');
 		echo $this->Html->css('bootstrap.min');
-		echo $this->Html->css('bootstrap-theme.min');			
+		echo $this->Html->css('bootstrap-theme.min');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -38,18 +38,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 <body>
 	<div class="container " role="main">
+
 <?php if (isset($current_user)): ?>
 <?php echo $this->element('default'); ?>
 <?php endif; ?>
 
- 
+
  <?php echo $this->Session->flash(); ?>
   <?php echo $this->Session->flash('auth'); ?>
 
-           
 	<div id="container">
 		<div id="header">
-			
+
 		</div>
 		<div id="content">
 
@@ -58,14 +58,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
+			<?php /* echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',
 					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
+				);*/
 			?>
 			<p>
-				<?php echo $cakeVersion; ?>
+				<?php //echo $cakeVersion; ?>
 			</p>
 		</div>
 	</div>
