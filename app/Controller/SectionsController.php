@@ -262,6 +262,7 @@ echo "hola 6";
 		$this->set(compact('subjects', 'users', 'periods', 'schedules', 'students','sections','id'));
 	}
 
+<<<<<<< HEAD
 	public function ownsec($id=null){
 
 	 	$sections = $this->Section->find('all' ,array('conditions' => array('Section.user_id' => $id)));
@@ -285,6 +286,8 @@ echo "hola 6";
     
 
 }
+=======
+>>>>>>> origin/Lee-Backend
 
 
 }

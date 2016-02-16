@@ -10,7 +10,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+<<<<<<< HEAD
         <?php  echo $this->Html->link('Inicio', array('controller' => 'users', 'action' => 'mainmenu'), array('class' => 'navbar-brand')) ?>
+=======
+        <?php  echo $this->Html->link('Inicio', array('controller' => 'users', 'action' => 'index'), array('class' => 'navbar-brand')) ?>
+>>>>>>> origin/Lee-Backend
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">

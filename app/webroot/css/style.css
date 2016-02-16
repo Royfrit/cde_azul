@@ -257,6 +257,7 @@ button:active {
 background-color: #d8ecf7;
 border: 1px solid #afcde3;
 }
+<<<<<<< HEAD
 
 .cverde {
   text-indent: 0.2cm;
@@ -397,3 +398,5 @@ p.note{
     text-align:center;
     margin:50px;
 }
+=======
+>>>>>>> origin/Lee-Backend

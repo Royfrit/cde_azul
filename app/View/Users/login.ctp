@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
          <h1>SISTEMA DE CONTROL DE ESTUDIO</h1>
     <h1>Ingeniería de Sistemas</h1>
 <div class="page-container">
+=======
+<div class="account-wall">
+>>>>>>> origin/Lee-Backend
 <?php echo $this->Form->create('User', array('class'=>'form-signin')); ?>
      <h1>INGRESAR</h1>
    <fieldset>

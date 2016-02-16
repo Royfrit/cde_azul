@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 <div class="page-container2">
   <?php  //debug($current_user); ?>
 <?php if (($opt==1) || ($opt==2)): ?>
 
     <h1>Inscripcion</h1>
+=======
+<?php if (($opt==1) || ($opt==2)): ?>
+
+    <h1 style='margin-left:360px;'>Busque la Materia</h1>
+>>>>>>> origin/Lee-Backend
     <br>
     <div class="row" >
         <?php echo $this->Form->create('User', array('type' => 'GET')); ?>
 
+<<<<<<< HEAD
         <div align='center'>
             <?php echo $this->Form->input('search', array('options' => $subjects,'label' => false,'div' => false ,'class' => 'form-control', 'autocomplet' => 'off', 'value' => $search)); ?>
         </div>
@@ -22,10 +29,30 @@
 
     </div>
     <br>
+=======
+        <div class="col-sm-4" align='center'>
+            <?php echo $this->Form->input('search', array('options' => $subjects,'label' => false,'div' => false,'style'=>'margin-left:320px;' ,'class' => 'form-control', 'autocomplet' => 'off', 'value' => $search)); ?>
+        </div>
+    <?php //debug($search) ?>
+<br> <br> <br>
+        <div class="col-sm-14" >
+        <p style='margin-left:420px;'>
+            <?php echo $this->Html->link('Regresar', array('action' => 'index'), array('class' => 'btn btn-warning') ); ?>
+           <?php echo $this->Form->button('Buscar', array('div' => false,'style'=>'align=center;' ,'class' => 'btn btn-primary'));?>
+          </p>
+        </div>
+
+
+        <?php echo $this->Form->end(); ?>
+
+    </div>
+    <br><br>
+>>>>>>> origin/Lee-Backend
 
     <?php endif; ?>
 
     <?php if ($opt==2): ?>
+<<<<<<< HEAD
         <?php
          
          $hora = array('1'=>'7:00-7:45','7:45-8:30','8:30-9:15','9:15-10:00','10:00-10:45','10:45-11:30','1:00-1:45','1:45-2:30','2:30-3:15','3:15-4:00','4:00-4:45','4:45-5:30'); 
@@ -69,6 +96,26 @@
 
 
                   <?php 
+=======
+        <?php  //debug($schedules);?>
+        <?php  //debug($section); ?>
+        <?php
+
+
+          //debug($schedules);
+          //debug($section[0]['Section']['id']);
+
+
+         ?>
+        <div class="row" >
+            <?php foreach($section as $sec): ?>
+
+                <div class="col-sm-2" align=center>
+<div class="cazul">
+
+
+                  <?php //debug($sec);
+>>>>>>> origin/Lee-Backend
 
                  foreach ($users as $r => $p) {
                    if ($r==$sec['Section']['user_id']) {
@@ -85,6 +132,7 @@
                     <br>
                     Cupos: <?php echo ($sec['Section']['quantity']); ?>
                     <br>
+<<<<<<< HEAD
                     Horario: <br>
                     <?php foreach ($ss as $ssa): ?>
                       <?php if ($ssa['SectionsSchedule']['section_id']==$sec['Section']['id']): ?>
@@ -139,6 +187,10 @@
 
 
 
+=======
+
+                    <?php echo $this->Html->link('Inscribir', array('action' => 'own', '1' ,$sec['Section']['id']), array('class' => 'btn btn-warning') ); ?>
+>>>>>>> origin/Lee-Backend
 
 
 
@@ -148,6 +200,7 @@
                     <br><br>
 
             </div>
+<<<<<<< HEAD
             <?php endif ?>
             <?php endforeach; ?>
         </div>
@@ -239,3 +292,9 @@
    </div>
 
 
+=======
+            <?php endforeach; ?>
+        </div>
+
+    <?php endif; ?>
+>>>>>>> origin/Lee-Backend

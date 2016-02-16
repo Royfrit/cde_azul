@@ -1,19 +1,19 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Period Model
+ * Subject Model
  *
  * @property Note $Note
  * @property Section $Section
  */
-class Period extends AppModel {
+class Subject extends AppModel {
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'number';
+	public $displayField = 'name';
 
 /**
  * Validation rules
@@ -21,7 +21,17 @@ class Period extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'number' => array(
+		'cod_subject' => array(
+			'notBlank' => array(
+				'rule' => array('notBlank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'uc' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -31,7 +41,7 @@ class Period extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'type' => array(
+		'name' => array(
 			'notBlank' => array(
 				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
@@ -51,11 +61,9 @@ class Period extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-<<<<<<< HEAD
-=======
 		'Note' => array(
 			'className' => 'Note',
-			'foreignKey' => 'period_id',
+			'foreignKey' => 'subject_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -66,10 +74,9 @@ class Period extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
->>>>>>> origin/Lee-Backend
 		'Section' => array(
 			'className' => 'Section',
-			'foreignKey' => 'period_id',
+			'foreignKey' => 'subject_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

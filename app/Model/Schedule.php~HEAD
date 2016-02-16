@@ -1,19 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Period Model
+ * Schedule Model
  *
- * @property Note $Note
  * @property Section $Section
  */
-class Period extends AppModel {
-
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'number';
+class Schedule extends AppModel {
 
 /**
  * Validation rules
@@ -21,7 +13,17 @@ class Period extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'number' => array(
+		'day' => array(
+			'notBlank' => array(
+				'rule' => array('notBlank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'classroom' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -31,9 +33,19 @@ class Period extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'type' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
+		'start' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'end' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -46,39 +58,23 @@ class Period extends AppModel {
 	// The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * hasMany associations
+ * hasAndBelongsToMany associations
  *
  * @var array
  */
-	public $hasMany = array(
-<<<<<<< HEAD
-=======
-		'Note' => array(
-			'className' => 'Note',
-			'foreignKey' => 'period_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
->>>>>>> origin/Lee-Backend
+	public $hasAndBelongsToMany = array(
 		'Section' => array(
 			'className' => 'Section',
-			'foreignKey' => 'period_id',
-			'dependent' => false,
+			'joinTable' => 'sections_schedules',
+			'foreignKey' => 'schedule_id',
+			'associationForeignKey' => 'section_id',
+			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
-			'exclusive' => '',
 			'finderQuery' => '',
-			'counterQuery' => ''
 		)
 	);
 

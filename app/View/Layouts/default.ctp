@@ -40,13 +40,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div class="container " role="main">
 
 <?php if (isset($current_user)): ?>
-<?php echo $this->element('default'); ?>
+<?php //echo $this->element('default'); ?>
 <?php endif; ?>
 
 
  <?php echo $this->Session->flash(); ?>
   <?php echo $this->Session->flash('auth'); ?>
 
+<<<<<<< HEAD
+=======
+           <?php //debug($current_user); ?>
+>>>>>>> origin/Lee-Backend
 	<div id="container">
 		<div id="header">
 

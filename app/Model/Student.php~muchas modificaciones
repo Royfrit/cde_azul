@@ -1,19 +1,20 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Period Model
+ * Student Model
  *
+ * @property User $User
  * @property Note $Note
  * @property Section $Section
  */
-class Period extends AppModel {
+class Student extends AppModel {
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'number';
+	public $displayField = 'user_id';
 
 /**
  * Validation rules
@@ -21,7 +22,7 @@ class Period extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'number' => array(
+		'user_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -31,9 +32,9 @@ class Period extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'type' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
+		'cohort' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -46,16 +47,29 @@ class Period extends AppModel {
 	// The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+/**
  * hasMany associations
  *
  * @var array
  */
 	public $hasMany = array(
-<<<<<<< HEAD
-=======
 		'Note' => array(
 			'className' => 'Note',
-			'foreignKey' => 'period_id',
+			'foreignKey' => 'student_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -65,20 +79,28 @@ class Period extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		),
->>>>>>> origin/Lee-Backend
+		)
+	);
+
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
 		'Section' => array(
 			'className' => 'Section',
-			'foreignKey' => 'period_id',
-			'dependent' => false,
+			'joinTable' => 'students_sections',
+			'foreignKey' => 'student_id',
+			'associationForeignKey' => 'section_id',
+			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
-			'exclusive' => '',
 			'finderQuery' => '',
-			'counterQuery' => ''
 		)
 	);
 
