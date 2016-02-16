@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Lee-Backend
 <?php 
  
 
@@ -17,6 +21,13 @@ if ($current_user['role']=='Estudiante') {
 ?>
 <div class="transparente">
 	<h1><?php echo __('Users'); ?></h1>
+<<<<<<< HEAD
+=======
+=======
+<div class="users index">
+	<h2><?php echo __('Users'); ?></h2>
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -79,7 +90,15 @@ if ($current_user['role']=='Estudiante') {
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
+<<<<<<< HEAD
 		
+=======
+<<<<<<< HEAD
+		
+=======
+		<li><?php echo $this->Html->link(__('Registro Propio'), array('controller' => 'notes', 'action' => 'own')); ?></li>
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Sedes'), array('controller' => 'sedes', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Sede'), array('controller' => 'sedes', 'action' => 'add')); ?> </li>

@@ -17,17 +17,39 @@ class NotesController extends AppController {
  */
 	public $components = array('Paginator', 'Flash', 'Session');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Lee-Backend
 
 /*
  * index method
  *
  * @return void
  
+<<<<<<< HEAD
+=======
+=======
+/**
+ * index method
+ *
+ * @return void
+ */
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 	public function index() {
 		$this->Note->recursive = 0;
 		$this->set('notes', $this->Paginator->paginate());
 	}
+<<<<<<< HEAD
 */
+=======
+<<<<<<< HEAD
+*/
+=======
+
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 /**
  * view method
  *
@@ -53,7 +75,15 @@ class NotesController extends AppController {
 			$this->Note->create();
 			if ($this->Note->save($this->request->data)) {
 				$this->Flash->success(__('The note has been saved.'));
+<<<<<<< HEAD
 				return $this->redirect(array('action' => 'mainmenu'));
+=======
+<<<<<<< HEAD
+				return $this->redirect(array('action' => 'mainmenu'));
+=======
+				return $this->redirect(array('action' => 'index'));
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 			} else {
 				$this->Flash->error(__('The note could not be saved. Please, try again.'));
 			}
@@ -64,7 +94,21 @@ class NotesController extends AppController {
 		$this->set(compact('students', 'subjects', 'periods'));
 	}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 	public function edit($id = null) {
 		if (!$this->Note->exists($id)) {
 			throw new NotFoundException(__('Invalid note'));
@@ -109,6 +153,10 @@ class NotesController extends AppController {
 
 	public function own($id=null,$v=null)
 	{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Lee-Backend
 
 
 		
@@ -128,6 +176,11 @@ class NotesController extends AppController {
 		$this->set(compact('students', 'subjects', 'periods','users','sections','schedules',"ss"));
 		
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 		$search=null;
 		$opt=1;
 		$this->set(compact('opt'));
@@ -145,17 +198,37 @@ class NotesController extends AppController {
 				$terms1[] = preg_replace('/[^a-zA-ZñÑáéíóúÁÉÍÓÚ0-9 ]/', '', $term);
 				$conditions[] = array('Section.subject_id LIKE' => '%' . $term . '%');
 			}
+<<<<<<< HEAD
 			$section = $this->Note->Section->find('all', array('recursive' => -1, 'conditions' => $conditions, 'limit' => 200));
+=======
+<<<<<<< HEAD
+			$section = $this->Note->Section->find('all', array('recursive' => -1, 'conditions' => $conditions, 'limit' => 200));
+=======
+			$section = $this->Note->Subject->Section->find('all', array('recursive' => -1, 'conditions' => $conditions, 'limit' => 200));
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 			$terms1 = array_diff($terms1, array(''));
 			//mandar los datos , los valores de nuestra busqueda terms1
 			//debug($users[0]['User']);
 
 			$opt=2;
+<<<<<<< HEAD
 			$this->set(compact('section', 'terms1','opt','notes','id'));
+=======
+<<<<<<< HEAD
+			$this->set(compact('section', 'terms1','opt','notes','id'));
+=======
+			$this->set(compact('section', 'terms1','opt'));
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 
 		}
 		$this->set(compact('search'));
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Lee-Backend
 	if (!empty($v)) {
 
 			$data = array('student_id'=> $id,'section_id' => $v);
@@ -261,11 +334,14 @@ class NotesController extends AppController {
 
 	}
 
+<<<<<<< HEAD
 	public function admincharge() {
 
 		
 	}
 
+=======
+>>>>>>> origin/Lee-Backend
 	public function pdf_estudio($id = null,$x = null) {
     // increase memory limit in PHP 
     ini_set('memory_limit', '512M');
@@ -315,5 +391,42 @@ public function pdf_ownnotes($id = null,$x = null) {
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+	debug($v);
+	if (!empty($v)) {
+
+		$options = array('conditions' => array('Subject.id' => $search));
+		$id3 = $this->Note->Subject->find('first', $options);
+
+		$options = array('conditions' => array('Section.id' => $v));
+		$id4 = $this->Note->Subject->Section->find('first', $options);
+
+			$data[] = array('student_id'=> $id,'subject_id' => $id3['Subject']['id'], 'period_id' => $id4['Section']['period_id']);
+			debug($data[0]);
+
+			$this->Note->create();
+			if ($this->Note->save($data[0])) {
+				$this->Flash->success(__('Se Inscribio la Materia.'));
+				//return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('Error'));
+			}
+
+	}
+
+
+		$schedules = $this->Note->Subject->Section->Schedule->find('all');
+		$users = $this->Note->Student->User->find('list');
+		$students = $this->Note->Student->find('list');
+		$sections = $this->Note->Subject->Section->find('all');
+		$subjects = $this->Note->Subject->find('list');
+		$periods = $this->Note->Period->find('list');
+		$this->set(compact('students', 'subjects', 'periods','users','sections','schedules'));
+		//debug($sections);
+	}
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend
 
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   body {
     background: #fff  url(../img/cde_azul.png) no-repeat center;
     
@@ -10,6 +11,192 @@
     font-size: 30px;
     font-weight: 70%;
     text-shadow: 0 1px 4px rgba(0,0,0,1);
+=======
+
+body {
+    //background: #dadada url(../img/cde_azul.png) no-repeat center;
+    background-size: 100% 120%;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin: 50px;
+    color: #fff;
+}
+
+.icono{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.encabezado{
+  font-family: 'Lora', serif;
+  background: rgba(255,255,255,0.3);
+  box-shadow: 3px 3px 4px #303030;
+  color: black;
+  position: center;
+  text-align: center;
+}
+
+
+.page-container {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 30%;
+    height: 65%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container2 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 95%;
+    height: 65%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container3 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 30%;
+    height: 80%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container4 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.transparente{ background: rgba(255,255,255,0.85); }
+
+h1 {
+    font-size: 30px;
+    font-weight: 70%;
+    text-shadow: 0 1px 4px rgba(0,0,0,1);
+}
+
+form {
+    position: relative;
+    width: 305px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 270px;
+    height: 42px;
+    margin-top: 25px;
+    padding: 0 15px;
+    background: #0072FD; 
+    border-radius: 6px;
+    border: 1px solid #3d3d3d; 
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+input:-moz-placeholder { color: #fff; }
+input:-ms-input-placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #fff; }
+
+input:focus {
+    outline: none;
+    -moz-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button {
+    cursor: pointer;
+    width: 300px;
+    height: 44px;
+    margin-top: 25px;
+    padding: 0;
+    background: #0072FD;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+button:hover {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button:active {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:        
+        0 5px 8px 0 rgba(0,0,0,.1) inset,
+        0 1px 4px 0 rgba(0,0,0,.1);
+
+    border: 0px solid #ef4300;
+}
+
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+>>>>>>> origin/Lee-Backend
 }
   .btn 
   {
@@ -305,6 +492,10 @@ button:active {
 background-color: #d8ecf7;
 border: 1px solid #afcde3;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Lee-Backend
 
 .cverde {
   text-indent: 0.2cm;
@@ -445,3 +636,8 @@ p.note{
     text-align:center;
     margin:50px;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/Lee-Backend
+>>>>>>> origin/Lee-Backend

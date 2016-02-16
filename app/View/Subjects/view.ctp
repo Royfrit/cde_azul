@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
 body
 { font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
@@ -181,6 +182,36 @@ top: 1px; left: -6px;
 
 <div class="related">
 	<h3><?php echo __('Secciones Relacionadas'); ?></h3>
+=======
+<div class="subjects view">
+<h2><?php echo __('Subject'); ?></h2>
+	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($subject['Subject']['id']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Cod Subject'); ?></dt>
+		<dd>
+			<?php echo h($subject['Subject']['cod_subject']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Uc'); ?></dt>
+		<dd>
+			<?php echo h($subject['Subject']['uc']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Name'); ?></dt>
+		<dd>
+			<?php echo h($subject['Subject']['name']); ?>
+			&nbsp;
+		</dd>
+	</dl>
+</div>
+
+<div class="related">
+	<h3><?php echo __('Related Sections'); ?></h3>
+>>>>>>> origin/Lee-Backend
 	<?php if (!empty($subject['Section'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -189,7 +220,11 @@ top: 1px; left: -6px;
 		<th><?php echo __('User Id'); ?></th>
 		<th><?php echo __('Period Id'); ?></th>
 		<th><?php echo('Cantidad'); ?></th>
+<<<<<<< HEAD
 		<th><?php echo __('Numero'); ?></th>
+=======
+		<th><?php echo __('Number'); ?></th>
+>>>>>>> origin/Lee-Backend
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($subject['Section'] as $section): ?>
@@ -209,4 +244,15 @@ top: 1px; left: -6px;
 		</tr>
 	<?php endforeach; ?>
 	</table>
+<<<<<<< HEAD
 <?php endif; ?></div>
+=======
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('New Section'), array('controller' => 'sections', 'action' => 'add')); ?> </li>
+		</ul>
+	</div>
+</div>
+>>>>>>> origin/Lee-Backend

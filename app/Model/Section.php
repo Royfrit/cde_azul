@@ -119,7 +119,11 @@ public $hasMany = array(
 		'Note' => array(
 			'className' => 'Note',
 			'foreignKey' => 'section_id',
+<<<<<<< HEAD:app/Model/Section.php
 			'dependent' => true,
+=======
+			'dependent' => false,
+>>>>>>> origin/Lee-Backend:app/Model/Section.php
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',

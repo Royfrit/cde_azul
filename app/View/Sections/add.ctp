@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style> 
 body 
 { font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; 
@@ -184,6 +185,18 @@ top: 1px; left: -6px;
 		echo $this->Form->input('number', array('class' => 'form-control', 'label' => 'Numero de la Seccion'));
 		echo $this->Form->input('quantity' , array('class' => 'form-control', 'label' => 'Cantidad de Alumnos')); ?>
 		<br>
+=======
+<div class="sections form">
+<?php echo $this->Form->create('Section'); ?>
+	<fieldset>
+		<legend><?php echo __('Add Section'); ?></legend>
+	<?php
+		echo $this->Form->input('subject_id');
+		echo $this->Form->input('user_id');
+		echo $this->Form->input('period_id');
+		echo $this->Form->input('number');
+		echo $this->Form->input('quantity'); ?>
+>>>>>>> origin/Lee-Backend
 		<table>
 			<table cellpadding="0" cellspacing="0" border="1">
 			<thead>
@@ -214,5 +227,28 @@ top: 1px; left: -6px;
 		</table>
 
 	</fieldset>
+<<<<<<< HEAD
 	<br>
 <?php echo $this->Form->end(array('label' => 'Registrar Seccion', 'class' =>'btn btn-success')); ?>
+=======
+<?php echo $this->Form->end(__('Submit')); ?>
+
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Sections'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Subjects'), array('controller' => 'subjects', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Subject'), array('controller' => 'subjects', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Periods'), array('controller' => 'periods', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Period'), array('controller' => 'periods', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Schedules'), array('controller' => 'schedules', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Schedule'), array('controller' => 'schedules', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Students'), array('controller' => 'students', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Student'), array('controller' => 'students', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
+>>>>>>> origin/Lee-Backend
