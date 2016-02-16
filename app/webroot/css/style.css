@@ -1,3 +1,182 @@
+
+body {
+    //background: #dadada url(../img/cde_azul.png) no-repeat center;
+    background-size: 100% 120%;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin: 50px;
+    color: #fff;
+}
+
+.icono{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.encabezado{
+  font-family: 'Lora', serif;
+  background: rgba(255,255,255,0.3);
+  box-shadow: 3px 3px 4px #303030;
+  color: black;
+  position: center;
+  text-align: center;
+}
+
+
+.page-container {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 30%;
+    height: 65%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container2 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 95%;
+    height: 65%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container3 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 30%;
+    height: 80%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.page-container4 {
+    background: #0072FD;
+    background: rgba(73,155,234,0.4);
+    margin: 2% auto 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+}
+
+.transparente{ background: rgba(255,255,255,0.85); }
+
+h1 {
+    font-size: 30px;
+    font-weight: 70%;
+    text-shadow: 0 1px 4px rgba(0,0,0,1);
+}
+
+form {
+    position: relative;
+    width: 305px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 270px;
+    height: 42px;
+    margin-top: 25px;
+    padding: 0 15px;
+    background: #0072FD; 
+    border-radius: 6px;
+    border: 1px solid #3d3d3d; 
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+input:-moz-placeholder { color: #fff; }
+input:-ms-input-placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #fff; }
+
+input:focus {
+    outline: none;
+    -moz-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button {
+    cursor: pointer;
+    width: 300px;
+    height: 44px;
+    margin-top: 25px;
+    padding: 0;
+    background: #0072FD;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #0072FD;
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+button:hover {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button:active {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:        
+        0 5px 8px 0 rgba(0,0,0,.1) inset,
+        0 1px 4px 0 rgba(0,0,0,.1);
+
+    border: 0px solid #ef4300;
+}
+
 .form-signin
 {
     max-width: 330px;
@@ -72,4 +251,149 @@
 {
     display: block;
     margin-top: 10px;
+}
+.cazul {
+  text-indent: 0.2cm;
+background-color: #d8ecf7;
+border: 1px solid #afcde3;
+}
+
+.cverde {
+  text-indent: 0.2cm;
+background-color: #3ace86;
+border: 1px solid #afcde3;
+}
+
+////////
+
+
+#navigationMenu li{
+    list-style:none;
+    height:39px;
+    padding:2px;
+    width:40px;
+}
+
+#navigationMenu span{
+    /* Container properties */
+    width:0;
+    left:38px;
+    padding:0;
+    position:absolute;
+    overflow:hidden;
+
+    /* Text properties */
+    font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:0.6px;
+    white-space:nowrap;
+    line-height:39px;
+    
+    /* CSS3 Transition: */
+    -webkit-transition: 0.25s;
+    
+    /* Future proofing (these do not work yet): */
+    -moz-transition: 0.25s;
+    transition: 0.25s;
+}
+
+#navigationMenu a{
+    background:url('../img/navigation.jpg') no-repeat;
+
+    height:39px;
+    width:38px;
+    display:block;
+    position:relative;
+}
+
+/* General hover styles */
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+    text-decoration:none;
+    
+    /* CSS outer glow with the box-shadow property */
+    -moz-box-shadow:0 0 5px #9ddff5;
+    -webkit-box-shadow:0 0 5px #9ddff5;
+    box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+
+#navigationMenu .home { background-position:0 0;}
+#navigationMenu .home:hover {   background-position:0 -39px;}
+#navigationMenu .home span{
+    background-color:#7da315;
+    color:#3d4f0c;
+    text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+
+#navigationMenu .about { background-position:-38px 0;}
+#navigationMenu .about:hover { background-position:-38px -39px;}
+#navigationMenu .about span{
+    background-color:#1e8bb4;
+    color:#223a44;
+    text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+
+#navigationMenu .services { background-position:-76px 0;}
+#navigationMenu .services:hover { background-position:-76px -39px;}
+#navigationMenu .services span{
+    background-color:#c86c1f;
+    color:#5a3517;
+    text-shadow:1px 1px 0 #d28344;
+}
+
+/* Yellow Button */
+
+#navigationMenu .portfolio { background-position:-114px 0;}
+#navigationMenu .portfolio:hover{ background-position:-114px -39px;}
+#navigationMenu .portfolio span{
+    background-color:#d0a525;
+    color:#604e18;
+    text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Purple Button */
+
+#navigationMenu .contact { background-position:-152px 0;}
+#navigationMenu .contact:hover { background-position:-152px -39px;}
+#navigationMenu .contact span{
+    background-color:#af1e83;
+    color:#460f35;
+    text-shadow:1px 1px 0 #d244a6;
+}
+
+/* The styles below are only needed for the demo page */
+
+#main{
+    margin:80px ;
+    position:relative;
+    width:40px;
+}
+
+a, a:visited,a:active {
+    color:#0196e3;
+    text-decoration:none;
+    outline:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+a img{
+    border:none;
+}
+
+p.note{
+    color:#707070;
+    font-size:10px;
+    text-align:center;
+    margin:50px;
 }

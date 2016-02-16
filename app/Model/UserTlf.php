@@ -1,0 +1,51 @@
+<?php
+App::uses('AppModel', 'Model');
+/**
+ * UserTlf Model
+ *
+ * @property User $User
+ */
+class UserTlf extends AppModel {
+
+/**
+ * Use table
+ *
+ * @var mixed False or table name
+ */
+	public $useTable = 'user_tlfs';
+
+/**
+ * Validation rules
+ *
+ * @var array
+ */
+	public $validate = array(
+		'phone' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
+
+	// The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+ public $belongsTo = array(
+	 'User' => array(
+		 'className' => 'User',
+		 'foreignKey' => 'user_id',
+		 'conditions' => '',
+		 'fields' => '',
+		 'order' => ''
+	 )
+ );
+}

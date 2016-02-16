@@ -11,22 +11,21 @@ class UserFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
-		'ced' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
-		'nombres' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 35, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'apellidos' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 35, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'Fecha_nac' => array('type' => 'date', 'null' => false, 'default' => null),
-		'Direccion' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 150, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'tipotlf' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 15, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'tlf' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 15, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'email' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 60, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'password' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'role' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 15, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
-		'sede' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 60, 'collate' => 'utf8_spanish_ci', 'charset' => 'utf8'),
+		'ced' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 8, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
+		'fullname' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 70, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
+		'birthday' => array('type' => 'date', 'null' => false, 'default' => null),
+		'address' => array('type' => 'text', 'null' => false, 'default' => null, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
+		'email' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
+		'password' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
+		'role' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 15, 'collate' => 'utf8_bin', 'charset' => 'utf8'),
 		'status' => array('type' => 'boolean', 'null' => false, 'default' => null),
+		'sede_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_spanish_ci', 'engine' => 'MyISAM')
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_bin', 'engine' => 'MyISAM')
 	);
 
 /**
@@ -37,18 +36,17 @@ class UserFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'ced' => 1,
-			'nombres' => 'Lorem ipsum dolor sit amet',
-			'apellidos' => 'Lorem ipsum dolor sit amet',
-			'Fecha_nac' => '2016-01-26',
-			'Direccion' => 'Lorem ipsum dolor sit amet',
-			'tipotlf' => 'Lorem ipsum d',
-			'tlf' => 'Lorem ipsum d',
+			'ced' => 'Lorem ',
+			'fullname' => 'Lorem ipsum dolor sit amet',
+			'birthday' => '2016-02-12',
+			'address' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'password' => 'Lorem ipsum dolor sit amet',
 			'role' => 'Lorem ipsum d',
-			'sede' => 'Lorem ipsum dolor sit amet',
-			'status' => 1
+			'status' => 1,
+			'sede_id' => 1,
+			'created' => '2016-02-12 21:16:20',
+			'modified' => '2016-02-12 21:16:20'
 		),
 	);
 
