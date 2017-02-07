@@ -33,25 +33,19 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
   public $components = array(
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/Lee-Backend
+
               'Session','RequestHandler',
               'Auth'=> array(
                   'loginRedirect'=>array(
                       'controller'=> 'users',
                       'action'=>'mainmenu'
-<<<<<<< HEAD
-=======
-=======
+
               'Session',
               'Auth'=> array(
                   'loginRedirect'=>array(
                       'controller'=> 'users',
                       'action'=>'index'
->>>>>>> origin/Lee-Backend
->>>>>>> origin/Lee-Backend
+
               ),
               'logoutRedirect'=> array(
                   'controller'=> 'users',
@@ -72,14 +66,7 @@ class AppController extends Controller {
 
               $this->Auth->allow('login', 'logout');
               $this->set('current_user', $this->Auth->user());
-<<<<<<< HEAD
-              
-=======
-<<<<<<< HEAD
-              
-=======
->>>>>>> origin/Lee-Backend
->>>>>>> origin/Lee-Backend
+
            }
 
 }
